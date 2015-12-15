@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>이메일 시그네쳐 만들기</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-62618216-5', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+    </head>
+    <body> 
+        <form style="font-family: sans-serif;" id="signature-form">
+            <label> 이름: </label>
+            <input type="text" name="name" autofocus required>
+            <label> 이메일: </label>
+            <input type="email" name="email" required>
+            <label> 직책: </label>
+            <input type="text" name="position" required>
+            <label> 전화번호: </label>
+            <input type="tel" name="phone" required>
+            <input type="submit" value="만들기!">
+        </form>
+        <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="/js/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js"></script>
+        <script id="signature-template" type="text/x-handlebars-template">
+            <br><br><br>
+            <span style="color: rgb(64,64,65); font-family: sans-serif; line-height: 20px; border-width: 2px 0px 0px; border-style: solid; border-color: rgb(0,192,243); padding: 2px 0px 0px; margin: 2px 0px 0px;"><a href="mailto:{{email}}" target="_blank" style="color: rgb(64, 64, 65); text-decoration: none;">{{name}}</a> |</span><span style="color: rgb(64,64,65); font-family: sans-serif; line-height: 20px; border-width: 2px 0px 0px; border-style: solid; border-color: rgb(159,203,60); padding: 2px 0px 0px; margin: 2px 0px 0px;"> {{position}} |<wbr></wbr></span><span style="color: rgb(64,64,65); font-family: sans-serif; line-height: 20px; border-width: 2px 0px 0px; border-style: solid; border-color: rgb(255,212,0); padding: 2px 0px 0px; margin: 2px 0px 0px;"> <a href="tel:{{phoneLink}}" value="{{phone}}" target="_blank" style="color: rgb(64, 64, 65); text-decoration: none;">{{phone}}</a></span>
+
+
+        </script>
+    </body>
+</html>
